@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Popins', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 5%;
+            background-image: linear-gradient(rgba(65, 76, 172, 0.9), rgba(102, 170, 102, 0.9)), url(bg.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            border-radius: 60px;
+            padding: 10px 20px;
+            backdrop-filter: blur(4px) saturate(180%);
+        }
+
+        .search-bar input {
+            background: transparent;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 24px 20px;
+            font-size: 20px;
+            color: #cac7ff;
+        }
+
+        .search-bar button img {
+            width: 25px;
+        }
+
+        .search-bar button {
+            border: 0;
+            border-radius: 50%;
+            width: 73px;
+            height: 60px;
+            background: #58629b;
+            cursor: pointer;
+        }
+
+        ::placeholder {
+            color: #cac7ff;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            border-radius: 20px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: rgb(146, 207, 207);
+            border-radius: 20px;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: rgb(146, 207, 207);
+            border-radius: 50%;
+            width: 70px;
+
+        }
+
+        .dropbtn {
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+            <div class="dropdown">
+                <button class="dropbtn">Categories</button>
+                <div class="dropdown-content">
+                    <a href="#">Everything</a>
+                    <a href="https://www.ibm.com/topics/software-development">Software Development</a>
+                    <a href="https://www.geeksforgeeks.org/web-development/">Web Development</a>
+                    <a href="https://aws.amazon.com/what-is/data-analytics/">Data Analyst</a>
+                    <a href="https://www.indeed.com/career-advice/finding-a-job/what-is-an-it-consultant">IT Consultant</a>
+                    <a href="https://www.solarwinds.com/resources/it-glossary/network-administration">Network Administrator</a>
+                </div>
+            </div>
+            <input type="text" placeholder="Search Anything" name="q">
+            <button type="submit"><img src="search.png" alt=""></button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
